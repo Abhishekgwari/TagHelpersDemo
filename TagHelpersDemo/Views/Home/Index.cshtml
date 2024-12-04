@@ -7,6 +7,19 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
+
+<a href="/Home/Contact/1">Contact page</a>
+<br />
+
+<a asp-controller="Home" asp-action="Contact">Contact page 4</a>
+<br />
+
+@Html.ActionLink("Contact page 2", "Contact", "Home")
+<br />
+<a href="@Url.Action("Contact")">Contact page 3</a>
+
+
+
 @* // creating hyperlink using tag heloer
 
 
@@ -25,8 +38,9 @@
 
 
 
+
 @* these hyperlink have id  *@
-<a href="/Home/Contact/1">Contact page</a>
+@* <a href="/Home/Contact/1">Contact page</a>
 
 <br />
 
@@ -36,4 +50,4 @@
 <a href="@Url.Action("Contact","Home",new {id=1})">Contact page 3</a>
 <br />
 
-<a asp-controller="Home" asp-action="Contact" asp-route-id="1">Contact page 4</a>
+<a asp-controller="Home" asp-action="Contact" asp-route-id="1">Contact page 4</a> *@
