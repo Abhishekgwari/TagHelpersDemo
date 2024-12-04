@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@* // creating hyperlink using tag heloer
+
+
+// these 3 are old methods *@
+@* <a href="/Home/Contact">Contact page</a>
+
+<br />
+
+@Html.ActionLink("Contact page 2", "Contact","Home")
+
+<br />
+<a href="@Url.Action("Contact","Home")">Contact page 3</a>
+<br />
+
+<a asp-controller="Home" asp-action="Contact">Contact page 4</a> *@    @*   this is tag helper  new faaature *@
+
+
+
+@* these hyperlink have id  *@
+<a href="/Home/Contact/1">Contact page</a>
+
+<br />
+
+@Html.ActionLink("Contact page 2", "Contact", "Home",new {id=1})
+
+<br />
+<a href="@Url.Action("Contact","Home",new {id=1})">Contact page 3</a>
+<br />
+
+<a asp-controller="Home" asp-action="Contact" asp-route-id="1">Contact page 4</a>
