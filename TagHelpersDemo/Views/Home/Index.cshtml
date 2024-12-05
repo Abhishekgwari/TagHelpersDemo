@@ -1,4 +1,6 @@
-﻿@{
+﻿@model TagHelpersDemo.Models.Employee             // BINDING MODEL WITH VIEW
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -8,7 +10,35 @@
 </div>
 
 
-<a href="/Home/Contact/1">Contact page</a>
+
+
+<div class="container"></div>
+ <div class="row">
+     <div class="col-sm-4">
+
+         <form class="d-grid" asp-action="Index" asp-controller="Home" method="post">
+            @*  pass model class  property inside asp-for *@
+             <input asp-for="Name" placeholder="Enter Name" class="form-control"/>    
+             <br />
+             <input asp-for="Age" placeholder="Enter Age" class="form-control"/>
+            <br />
+
+            <input asp-for="Designation" placeholder="Enter Designation" class="form-control" />
+            <br />
+
+            <input asp-for="Salary" placeholder="Enter Salary" class="form-control" />
+            <br />
+
+            <input type="submit" value="Submit" class="btn-outline-primary"/>
+
+         </form>
+     </div>
+ </div>
+
+
+
+
+@* <a href="/Home/Contact/1">Contact page</a>
 <br />
 
 <a asp-controller="Home" asp-action="Contact">Contact page 4</a>
@@ -16,7 +46,7 @@
 
 @Html.ActionLink("Contact page 2", "Contact", "Home")
 <br />
-<a href="@Url.Action("Contact")">Contact page 3</a>
+<a href="@Url.Action("Contact")">Contact page 3</a> *@
 
 
 
